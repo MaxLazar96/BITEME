@@ -5,8 +5,6 @@ A client-server food delivery system in Java and JavaFX: customers choose a rest
 > Team project (group 15), B.Sc. Software Engineering (Braude College), 4 students.
 > **My part:** most of the server side: client-server communication, order processing, location-based restaurant selection, and the MySQL queries.
 
-![BITEME client screen](docs/screenshot-client.png)
-<!-- Add a screenshot of the client app at docs/screenshot-client.png -->
 
 ## Features
 - **Restaurant selection by location**: customers see restaurants near them
