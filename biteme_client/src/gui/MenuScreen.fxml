@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.MenuController">
+
+    <!-- Entrees Tab -->
+ <Tab closable="false" text="Entrees">
+        <VBox prefHeight="481.0" prefWidth="654.0">
+            <TableView fx:id="entreesTableView">
+                <columns>
+                    <TableColumn fx:id="entreeNameColumn" prefWidth="118.0" text="Dish Name" />
+                    <TableColumn fx:id="entreeDescriptionColumn" prefWidth="120.0" text="Description" />
+                    <TableColumn fx:id="entreePriceColumn" prefWidth="82.0" text="Price" />
+                    <TableColumn fx:id="entreeRoastLevelColumn" prefWidth="101.0" text="Roast Level">
+                        <cellFactory>
+                            <client.ComboBoxTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="entreeRemarkColumn" prefWidth="101.0" text="Remarks">
+                        <cellFactory>
+                            <client.TextFieldTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="entreeAddColumn" prefWidth="101.0" text="Add">
+                        <cellFactory>
+                            <client.ButtonTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </VBox>
+    </Tab>
+
+    <!-- Starters Tab -->
+    <Tab closable="false" text="Starters">
+        <VBox>
+            <TableView fx:id="startersTableView">
+                <columns>
+                    <TableColumn fx:id="starterNameColumn" text="Dish Name" />
+                    <TableColumn fx:id="starterDescriptionColumn" text="Description" />
+                    <TableColumn fx:id="starterPriceColumn" text="Price" />
+                    <TableColumn fx:id="starterRemarkColumn" text="Remarks">
+                        <cellFactory>
+                            <client.TextFieldTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="starterAddColumn" text="Add">
+                        <cellFactory>
+                            <client.ButtonTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </VBox>
+    </Tab>
+
+    <!-- Salads Tab -->
+    <Tab closable="false" text="Salads">
+        <VBox>
+            <TableView fx:id="saladsTableView">
+                <columns>
+                    <TableColumn fx:id="saladNameColumn" text="Dish Name" />
+                    <TableColumn fx:id="saladDescriptionColumn" text="Description" />
+                    <TableColumn fx:id="saladPriceColumn" text="Price" />
+                    <TableColumn fx:id="saladRemarkColumn" text="Remarks">
+                        <cellFactory>
+                            <client.TextFieldTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="saladAddColumn" text="Add">
+                        <cellFactory>
+                            <client.ButtonTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </VBox>
+    </Tab>
+
+    <!-- Desserts Tab -->
+    <Tab closable="false" text="Desserts">
+        <VBox>
+            <TableView fx:id="dessertsTableView">
+                <columns>
+                    <TableColumn fx:id="dessertNameColumn" text="Dish Name" />
+                    <TableColumn fx:id="dessertDescriptionColumn" text="Description" />
+                    <TableColumn fx:id="dessertPriceColumn" text="Price" />
+                    <TableColumn fx:id="dessertRemarkColumn" text="Remarks">
+                        <cellFactory>
+                            <client.TextFieldTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="dessertAddColumn" text="Add">
+                        <cellFactory>
+                            <client.ButtonTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </VBox>
+    </Tab>
+
+    <!-- Drinks Tab -->
+    <Tab closable="false" text="Drinks">
+        <VBox>
+            <TableView fx:id="drinksTableView">
+                <columns>
+                    <TableColumn fx:id="drinkNameColumn" text="Dish Name" />
+                    <TableColumn fx:id="drinkDescriptionColumn" text="Description" />
+                    <TableColumn fx:id="drinkPriceColumn" text="Price" />
+                    <TableColumn fx:id="drinkRemarkColumn" text="Remarks">
+                        <cellFactory>
+                            <client.TextFieldTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="drinkAddColumn" text="Add">
+                        <cellFactory>
+                            <client.ButtonTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </VBox>
+    </Tab>
+
+    <!-- Sides Tab -->
+    <Tab closable="false" text="Sides">
+        <VBox>
+            <TableView fx:id="sidesTableView">
+                <columns>
+                    <TableColumn fx:id="sideNameColumn" text="Dish Name" />
+                    <TableColumn fx:id="sideDescriptionColumn" text="Description" />
+                    <TableColumn fx:id="sidePriceColumn" text="Price" />
+                    <TableColumn fx:id="sideRemarkColumn" text="Remarks">
+                        <cellFactory>
+                            <client.TextFieldTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="sideAddColumn" text="Add">
+                        <cellFactory>
+                            <client.ButtonTableCellFactory />
+                        </cellFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </VBox>
+    </Tab>
+
+    <!-- Cart Tab -->
+    <Tab closable="false" text="Your Cart">
+        <VBox fx:id="cartSection" spacing="10">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="125.0" text="Your Cart:">
+                <font>
+                    <Font name="Arial Unicode MS" size="22.0" />
+                </font>
+            </Label>
+            <TableView fx:id="cartTableView">
+                <columns>
+                    <TableColumn fx:id="cartDishNameColumn" prefWidth="108.0" text="Dish Name" />
+                    <TableColumn fx:id="cartQuantityColumn" prefWidth="108.0" text="Quantity" />
+                    <TableColumn fx:id="cartPriceColumn" prefWidth="81.0" text="Price" />
+                    <TableColumn fx:id="cartRemoveColumn" text="Remove" />
+                    <TableColumn fx:id="cartRemarksColumn" prefWidth="200.0" text="Remarks" />
+                    
+                </columns>
+            </TableView>
+            <HBox prefWidth="542.0" spacing="10">
+                <Button onAction="#handleCheckoutButton" text="Checkout" />
+            </HBox>
+        </VBox>
+    </Tab>
+    
+</TabPane>

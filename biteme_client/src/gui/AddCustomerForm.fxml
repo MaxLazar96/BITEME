@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.AddCustomerController">
+
+    <!-- ID -->
+    <Label text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="idField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+    <!-- First Name -->
+    <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="firstNameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <!-- Last Name -->
+    <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="lastNameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <!-- Email -->
+    <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <!-- Address -->
+    <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextField fx:id="addressField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+    <!-- Username -->
+    <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+    <!-- Password -->
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <TextField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+    <!-- Phone Number -->
+    <Label text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+    <TextField fx:id="phoneNumberField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+    <!-- Credits -->
+    <Label text="Credits:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+    <TextField fx:id="creditsField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+    <!-- Home Branch -->
+    <Label text="Home Branch:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+    <ComboBox fx:id="homeBranchComboBox" prefHeight="31.0" prefWidth="80.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+    <!-- Submit Button -->
+    <Button onAction="#handleSubmitButton" prefHeight="57.0" prefWidth="87.0" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+    <Button onAction="#handleCloseButton" text="Close" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+    
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+
+</GridPane>

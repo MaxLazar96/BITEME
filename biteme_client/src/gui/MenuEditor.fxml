@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ComboBox?>
+
+
+<AnchorPane prefHeight="902.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.MenuEditorController">
+
+    <!-- Title Label -->
+    <Label alignment="CENTER" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Menu Editor" underline="true" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="10" />
+
+    <!-- Search Field -->
+    <TextField fx:id="searchField" promptText="Search dishes..." AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="50" />
+
+    <!-- Table Section -->
+    <TableView fx:id="dishesTableView" prefHeight="355.0" prefWidth="540.0" AnchorPane.bottomAnchor="533.0" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="90">
+        <columns>
+            <TableColumn fx:id="dishNameColumn" prefWidth="149.0" text="Dish Name" />
+            <TableColumn fx:id="dishTypeColumn" prefWidth="144.0" text="Type" />
+            <TableColumn fx:id="dishSizeColumn" prefWidth="129.0" text="Size" />
+            <TableColumn fx:id="dishPriceColumn" prefWidth="104.0" text="Price" />
+        </columns>
+    </TableView>
+
+    <!-- Form Section for Adding/Editing -->
+    <VBox prefHeight="498.0" prefWidth="500.0" spacing="10" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="450">
+        
+        <!-- Add New Dish Section -->
+        <TitledPane expanded="true" text="Add New Dish">
+            <VBox spacing="5">
+                <TextField fx:id="newDishNameField" promptText="Dish Name" />
+                <ComboBox fx:id="newDishTypeComboBox" promptText="Select Type" />
+                <TextField fx:id="newDishSizeField" promptText="Size" />
+                <TextField fx:id="newDishPriceField" promptText="Price" />
+                <Button onAction="#handleAddNewDish" text="Add New Dish" />
+            </VBox>
+        </TitledPane>
+        
+        <!-- Edit Selected Dish Section -->
+        <TitledPane expanded="true" text="Edit Selected Dish">
+            <VBox spacing="5">
+                <TextField fx:id="editDishNameField" promptText="Dish Name" />
+                <ComboBox fx:id="editDishTypeComboBox" promptText="Select Type" />
+                <TextField fx:id="editDishSizeField" promptText="Size" />
+                <TextField fx:id="editDishPriceField" promptText="Price" />
+                <HBox spacing="10">
+                    <Button onAction="#handleEditDish" text="Edit Dish" />
+                    <Button onAction="#handleDeleteDish" text="Delete Dish" />
+                </HBox>
+            </VBox>
+        </TitledPane>
+        
+    </VBox>
+
+</AnchorPane>
